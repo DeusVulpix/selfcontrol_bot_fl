@@ -1,13 +1,14 @@
+require("dotenv").config();
 
 const TelegramApi = require('node-telegram-bot-api');
 
 const axios = require('axios');
 
-const token = '5620225388:AAHT19-VDX4sJ-ukM4b9lytKmNnNUlxh64U';
+const token_bot = process.env.token;
 
-const bot = new TelegramApi(token,{polling: true});
+const bot = new TelegramApi(token_bot,{polling: true});
 
-const weather_key = 'd27b8c763a5bc1d779be089304a3cf15';
+const weather_key = process.env.weather_key;
 
 const start = () => {
 
